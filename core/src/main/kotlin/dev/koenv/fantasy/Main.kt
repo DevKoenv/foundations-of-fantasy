@@ -1,6 +1,15 @@
 package dev.koenv.fantasy
 
-import com.badlogic.gdx.ApplicationAdapter
+import dev.koenv.fantasy.screens.GameScreen
+import ktx.app.KtxGame
+import ktx.app.KtxScreen
+import ktx.async.KtxAsync
 
-/** [com.badlogic.gdx.ApplicationListener] implementation shared by all platforms. */
-class Main : ApplicationAdapter()
+class Main : KtxGame<KtxScreen>() {
+    override fun create() {
+        KtxAsync.initiate()
+
+        addScreen(GameScreen())
+        setScreen<GameScreen>()
+    }
+}
