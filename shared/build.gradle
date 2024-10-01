@@ -3,4 +3,6 @@ eclipse.project.name = appName + '-shared'
 dependencies {
   implementation "com.github.MrStahlfelge.gdx-websockets:core:$websocketVersion"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+  api "com.esotericsoftware:kryonet:$kryonetVersion"
 }
